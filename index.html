@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ai Image Generetor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+    <div class="auth-container" id="authContainer">
+        <div class="buttons">
+            <button id="showLoginBtn">🔐 Login</button>
+            <button id="showSignupBtn">✨ Sign Up</button>
+        </div>
+
+        <div id="loginFormDiv">
+            <h2>welcome back</h2>
+            <input type="email" id="loginEmailInput" placeholder="Email address" autocomplete="email">
+            <input type="password" id="loginPassInput" placeholder="Password" autocomplete="current-password">
+            <button id="loginActionBtn">➡️ Log in</button>
+        </div>
+
+
+        <div id="signupFormDiv" class="hide">
+            <h2>create account</h2>
+            <input type="email" id="signupEmailInput" placeholder="Email address" autocomplete="email">
+            <input type="password" id="signupPassInput" placeholder="Password" autocomplete="new-password">
+            <button id="signupActionBtn">🚀 Sign Up</button>
+        </div>
+
+        <div id="authMessage" class="message-area"></div>
+    </div>
+
+
+    <div class="ai-section" id="aiGeneratorSection">
+        <h2>✨ Ai Image Generetor ✨</h2>
+        <div class="prompt">
+            <input type="text" id="promptInput" placeholder="Write anything" >
+            <button id="generateImageBtn">Generate</button>
+        </div>
+        <div id="imageDisplayBox"></div>
+    </div>
+
+    
+</body>
+</html>

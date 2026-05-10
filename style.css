@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, -apple-system, 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #0ea5e9);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.auth-container {
+    width: 380px;
+
+    padding: 30px 30px;
+    border-radius: 32px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    text-align: center;
+    transition: transform 0.25s ease, opacity 0.3s ease;
+    margin: auto;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.buttons button {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    box-shadow: none;
+    font-weight: 600;
+   
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(14, 165, 233, 0.3);
+}
+
+h2 {
+    color: white;
+    margin: 15px 0 20px;
+    font-size: 26px;
+    font-weight: 600;
+    
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s;
+    backdrop-filter: blur(4px);
+}
+
+
+
+input:focus {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.03);
+    border: 1px aqua solid;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    background: linear-gradient(95deg, #38bdf8, #0ea5e9);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.25s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 22px rgba(14, 165, 233, 0.5);
+    background: linear-gradient(95deg, #4ac7ff, #1aafff);
+}
+
+.message-area {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e2e8f0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 40px;
+    
+}
+
+.hide {
+    display: none;
+}
+
+
+.ai-section {
+    display: none;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 30px;
+    animation: fadeSlideUp 2s ease-out;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.prompt {
+    width: 100%;
+    background: rgba(30, 41, 59, 0.75);
+    backdrop-filter: blur(8px);
+    border: 2px solid #5eead4;
+    border-radius: 70px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.prompt input {
+    background: transparent;
+    width: 70%;
+    margin: 0;
+    padding: 14px 18px;
+    font-size: 18px;
+    color: #facc15;
+    font-weight: 500;
+}
+
+
+
+.prompt button {
+    width: auto;
+    margin: 0;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 50px;
+    background: linear-gradient(120deg, #0ea5e9, #0284c7);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prompt button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(120deg, #38bdf8, #0ea5e9);
+}
+
+#imageDisplayBox {
+    background-color: #0f172ac9;
+    backdrop-filter: blur(8px);
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    border-radius: 28px;
+    border: 3px solid rgba(94, 234, 212, 0.7);
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -10px black;
+    transition: 0.2s;
+}
+
+#imageDisplayBox div,
+#imageDisplayBox .image-card {
+    width: 100%;
+    height: 100%;
+}
+
+#imageDisplayBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+}
+
+
+
+
+.image-card {
+    animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.96);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
