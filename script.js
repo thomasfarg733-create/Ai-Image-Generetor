@@ -159,17 +159,6 @@
         }
     });
 
-    window.addEventListener('DOMContentLoaded', () => {
-        authContainer.style.display = '';
-        aiSection.style.display = 'none';
-        imageBox.style.display = 'none';
-        loginDiv.classList.remove('hide');
-        signupDiv.classList.add('hide');
-        authMessageSpan.innerHTML = '';
-        loginEmail.value = '';
-        loginPass.value = '';
-        signupEmail.value = '';
-        signupPass.value = '';
-        promptField.value = '';
+    
     });
 })();
